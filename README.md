@@ -42,7 +42,7 @@ A standard queue with dynamic resizing.
 **Example:**
 
 ```go
-import "github.com/yourusername/yourrepository/queue"
+import "github.com/Shreyas-Adireddy/data_structures"
 
 func main() {
     q := queue.New[int]()
