@@ -1,4 +1,4 @@
-# Golang Concurrent/Single-Threaded Data Structures Library
+# Golang Concurrent/Single-Threaded Data Structures Library w/ Generics
 
 Welcome to the Golang Data Structures Library! This library provides a variety of efficient and thread-safe data structures implemented in Go, designed to enhance performance and concurrency handling in your applications.
 
@@ -8,15 +8,19 @@ Welcome to the Golang Data Structures Library! This library provides a variety o
 - **Deque**: A double-ended queue that allows insertion and deletion from both ends.
 - **Stack**: A standard stack with push and pop operations.
 - **Concurrent Queue (cqueue)**: A thread-safe queue using `sync.RWMutex` for concurrent access.
-- **Concurrent Stack (cstack)**: A thread-safe stack implementation.
-- **Concurrent Deque (cdeque)**: A thread-safe double-ended queue.
+- **Concurrent Stack (cstack)**: A thread-safe stack implementation with `sync.RWMutex`.
+- **Concurrent Deque (cdeque)**: A thread-safe double-ended queue with `sync.RWMutex`.
+
+## Why use my data structures?
+
+- I implemented them all optimally. For queue and deque, I use a circular array under the hood and use a formula to resize based on how large the structure becomes.
 
 ## Installation
 
 To install the library, use the following command:
 
 ```bash
-go get github.com/yourusername/yourrepository
+go get github.com/Shreyas-Adireddy/data_structures
 ```
 
 ## Usage
