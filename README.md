@@ -1,6 +1,6 @@
 # Golang Concurrent/Single-Threaded Data Structures Library
 
-Welcome to the Golang Concurrent Data Structures Library! This library provides a variety of efficient and thread-safe data structures implemented in Go, designed to enhance performance and concurrency handling in your applications.
+Welcome to the Golang Data Structures Library! This library provides a variety of efficient and thread-safe data structures implemented in Go, designed to enhance performance and concurrency handling in your applications.
 
 ## Features
 
