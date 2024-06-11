@@ -13,7 +13,7 @@ Welcome to the Golang Data Structures Library! This library provides a variety o
 
 ## Why use my data structures?
 
-- I implemented them all optimally. For queue and deque, I use a circular array under the hood and use a formula to resize based on how large the structure becomes.
+- I implemented them all optimally. For queue and deque, I use a circular array under the hood and use a formula to resize based on how large the structure becomes. They also have escapes from the initial data structures, by means of a ToSlice() function, to allow the you to look at the underlying data if necessary. 
 
 ## Installation
 
@@ -71,7 +71,7 @@ A double-ended queue that supports insertion and deletion from both ends.
 **Example:**
 
 ```go
-import "github.com/yourusername/yourrepository/deque"
+import "github.com/Shreyas-Adireddy/data_structures/deque"
 
 func main() {
     d := deque.New[int]()
@@ -97,7 +97,7 @@ A standard stack with push and pop operations.
 **Example:**
 
 ```go
-import "github.com/yourusername/yourrepository/stack"
+import "github.com/Shreyas-Adireddy/data_structures/stack"
 
 func main() {
     s := stack.New[int]()
@@ -124,7 +124,7 @@ A thread-safe queue using `sync.RWMutex` for concurrent access.
 **Example:**
 
 ```go
-import "github.com/yourusername/yourrepository/cqueue"
+import "github.com/Shreyas-Adireddy/data_structures/cqueue"
 
 func main() {
     cq := cqueue.New[int]()
@@ -150,7 +150,7 @@ A thread-safe stack implementation.
 **Example:**
 
 ```go
-import "github.com/yourusername/yourrepository/cstack"
+import "github.com/Shreyas-Adireddy/data_structures/cstack"
 
 func main() {
     cs := cstack.New[int]()
@@ -179,7 +179,7 @@ A thread-safe double-ended queue.
 **Example:**
 
 ```go
-import "github.com/yourusername/yourrepository/cdeque"
+import "github.com/Shreyas-Adireddy/data_structures/cdeque"
 
 func main() {
     cd := cdeque.New[int]()
@@ -196,7 +196,7 @@ We welcome contributions to improve this library! Here are some ways you can hel
 1. **Report Bugs**: If you encounter any issues, please create a GitHub issue.
 2. **Suggest Features**: Have an idea for a new feature? Let us know by opening an issue.
 3. **Submit Pull Requests**: If you'd like to fix a bug or implement a feature, feel free to submit a pull request. Make sure to include tests and documentation for your changes.
-4. **Improve Documentation**: Help us improve our documentation by submitting updates or new examples.
+4. **Improve Testcases**: Help me write some more testcases for each of the data structures.
 
 ### Getting Started
 
