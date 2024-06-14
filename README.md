@@ -13,14 +13,14 @@ Welcome to the Golang Data Structures Library! This library provides a variety o
 
 ## Why use my data structures?
 
-- I implemented them all optimally. For queue and deque, I use a circular array under the hood and use a formula to resize based on how large the structure becomes. They also have escapes from the initial data structures, by means of a ToSlice() function, to allow the you to look at the underlying data if necessary. 
+I implemented them all optimally. For queue and deque, I use a circular array under the hood and use a formula to resize based on how large the structure becomes. Interestingly, I use the same formula that Go slices use under the hood for resizing. They also have escapes from the initial data structures, by means of a ToSlice() function, to allow the you to look at the underlying data if necessary. 
 
 ## Installation
 
 To install the library, use the following command:
 
 ```bash
-go get github.com/Shreyas-Adireddy/data_structures
+go get github.com/Shreyas-Adireddy/data_structures/queue
 ```
 
 ## Usage
