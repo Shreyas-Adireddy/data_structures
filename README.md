@@ -13,14 +13,14 @@ Welcome to the Golang Data Structures Library! This library provides a variety o
 
 ## Why use my data structures?
 
-I implemented them all optimally. For queue and deque, I use a circular array under the hood and use a formula to resize based on how large the structure becomes. Interestingly, I use the same formula that Go slices use under the hood for resizing. They also have escapes from the initial data structures, by means of a ToSlice() function, to allow the you to look at the underlying data if necessary. 
+I implemented them all optimally. For queue and deque, I use a circular array under the hood instead of a linked list as arrays get the advantage of cache locality. Interestingly, my resize formula is the same formula that Go slices use under the hood. They also have escapes from the initial data structures, by means of a ToSlice() function, to allow the you to look at the underlying data if necessary. 
 
 ## Installation
 
 To install the library, use the following command:
 
 ```bash
-go get github.com/Shreyas-Adireddy/data_structures/queue
+go get github.com/Shreyas-Adireddy/data_structures
 ```
 
 ## Usage
@@ -38,11 +38,12 @@ A standard queue with dynamic resizing.
 - `Size() int`: Returns the number of elements in the queue.
 - `IsEmpty() bool`: Checks if the queue is empty.
 - `Clear()`: Clears all elements in the queue.
+- `Resize(newCap int)`: Resizes underlying array preemtively so there aren't multiple resizes. However, Dequeue may half the capacity if queue in not more than 1/4-th full so its advised to fill the queue for the size you allocate. 
 
 **Example:**
 
 ```go
-import "github.com/Shreyas-Adireddy/data_structures"
+import "github.com/Shreyas-Adireddy/data_structures/queue"
 
 func main() {
     q := queue.New[int]()
